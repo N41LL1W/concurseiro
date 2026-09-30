@@ -6,9 +6,9 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
 1. `npm install`
 2. Crie um projeto em neon.tech e copie a connection string para `.env.local` (modelo em `.env.example`).
 3. Rode o conteúdo de `db/schema.sql` no SQL Editor do Neon (cria as tabelas de conteúdo e de registro).
-4. Rode `db/dia1_v2.sql` para cadastrar o Dia 1 completo (substitui `db/seed.sql`, que ficou obsoleto —
-   `dia1_v2.sql` já apaga o Dia 1 antigo e recadastra do zero, então rode só ele).
-5. Rode `db/seed_dia2.sql` para cadastrar o Dia 2 (Matemática + Administrativo).
+4. Rode `db/dia1_v2.sql` para cadastrar o Dia 1 completo (substitui `db/seed.sql`, que ficou obsoleto).
+5. Rode `db/dia2_v2.sql` para cadastrar o Dia 2 completo (substitui `db/seed_dia2.sql`, que ficou obsoleto —
+   `dia2_v2.sql` já apaga o Dia 2 antigo e recadastra do zero, então rode só ele).
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
