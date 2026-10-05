@@ -11,6 +11,8 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
 6. Rode `db/dia3_v2.sql` para cadastrar o Dia 3 completo (Português: classes gramaticais + Informática).
 7. Rode `db/dia4_v2.sql` para cadastrar o Dia 4 completo (Constitucional: art. 5º + Matemática avançada).
 8. Rode `db/dia5_v2.sql` para cadastrar o Dia 5 completo (revisão geral das 5 matérias + mini-simulado de 20 questões).
+9. Rode `db/dia6_v2.sql` para cadastrar o Dia 6 completo (concordância, equações, organização administrativa,
+   segurança da informação + mini-simulado de 20 questões). Esse é o primeiro dia da Semana 2.
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
