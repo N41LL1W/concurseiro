@@ -15,6 +15,8 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
    segurança da informação + mini-simulado de 20 questões). Esse é o primeiro dia da Semana 2.
 10. Rode `db/dia7_v2.sql` para cadastrar o Dia 7 completo (regência, juros simples/compostos, direitos sociais
     e nacionalidade, Sistema Financeiro Nacional + mini-simulado de 20 questões).
+11. Rode `db/dia8_v2.sql` para cadastrar o Dia 8 completo (concordância, razão/proporção/regra de três, LIMPE,
+    internet e segurança + mini-simulado de 20 questões, com bloco de nível mais alto no final).
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
