@@ -17,6 +17,8 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
     e nacionalidade, Sistema Financeiro Nacional + mini-simulado de 20 questões).
 11. Rode `db/dia8_v2.sql` para cadastrar o Dia 8 completo (concordância, razão/proporção/regra de três, LIMPE,
     internet e segurança + mini-simulado de 20 questões, com bloco de nível mais alto no final).
+12. Rode `db/dia9_v2.sql` para cadastrar o Dia 9 completo (colocação pronominal, porcentagem, atos
+    administrativos, sistemas operacionais/arquivos/atalhos + mini-simulado de 20 questões).
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
