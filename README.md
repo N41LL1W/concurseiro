@@ -26,6 +26,8 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
     o primeiro dia da Semana 3.
 15. Rode `db/dia12_v2.sql` para cadastrar o Dia 12 completo (concordância verbal/nominal, equações do 1º
     grau, nacionalidade/direitos políticos, internet/navegadores/cookies/cache + mini-simulado de 12 questões).
+16. Rode `db/dia13_v2.sql` para cadastrar o Dia 13 completo (regência verbal/nominal, sistemas de equações,
+    Administração Pública/art. 37, segurança da informação + mini-simulado de 12 questões).
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
