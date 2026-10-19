@@ -30,6 +30,8 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
     Administração Pública/art. 37, segurança da informação + mini-simulado de 12 questões).
 17. Rode `db/dia14_v2.sql` para cadastrar o Dia 14 completo (crase, porcentagem, art. 5º/remédios
     constitucionais, Excel e planilhas + mini-simulado de 12 questões).
+18. Rode `db/dia15_v2.sql` para cadastrar o Dia 15 completo (pontuação, regra de três, atos administrativos,
+    sistemas operacionais/arquivos + mini-simulado de 12 questões). Esse é o primeiro dia da Semana 4.
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
