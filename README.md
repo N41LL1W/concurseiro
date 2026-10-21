@@ -32,6 +32,8 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
     constitucionais, Excel e planilhas + mini-simulado de 12 questões).
 18. Rode `db/dia15_v2.sql` para cadastrar o Dia 15 completo (pontuação, regra de três, atos administrativos,
     sistemas operacionais/arquivos + mini-simulado de 12 questões). Esse é o primeiro dia da Semana 4.
+19. Rode `db/dia16_v2.sql` para cadastrar o Dia 16 completo (interpretação de textos, razão/proporção/escalas,
+    poderes administrativos, redes/internet/computação em nuvem + mini-simulado de 12 questões).
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
