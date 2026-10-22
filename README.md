@@ -34,6 +34,9 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
     sistemas operacionais/arquivos + mini-simulado de 12 questões). Esse é o primeiro dia da Semana 4.
 19. Rode `db/dia16_v2.sql` para cadastrar o Dia 16 completo (interpretação de textos, razão/proporção/escalas,
     poderes administrativos, redes/internet/computação em nuvem + mini-simulado de 12 questões).
+20. Rode `db/dia17_v2.sql` para cadastrar o Dia 17 completo (classes de palavras, porcentagem avançada,
+    art. 5º/remédios constitucionais, segurança da informação + mini-simulado de 12 questões, agora com
+    5 alternativas por questão).
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
