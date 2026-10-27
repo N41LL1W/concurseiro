@@ -40,6 +40,9 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
 21. Rode `db/dia18_v2.sql` para cadastrar o Dia 18 completo (concordância verbal aprofundada, equações/
     sistemas, poderes administrativos revisados, planilhas eletrônicas + mini-simulado de 12 questões
     com 5 alternativas).
+22. Rode `db/dia19_v2.sql` para cadastrar o Dia 19 completo (regência verbal/nominal e crase, razão/
+    proporção/regra de três, direitos sociais e trabalhistas (arts. 6º-7º), Sistema Financeiro Nacional
+    + mini-simulado de 12 questões com 5 alternativas). Fecha a Semana 4.
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
