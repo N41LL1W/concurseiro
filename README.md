@@ -46,6 +46,8 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
 23. Rode `db/dia20_v2.sql` para cadastrar o Dia 20 completo (colocação pronominal, porcentagem e variações
     sucessivas, art. 37/Administração direta e indireta, produtos e serviços bancários + mini-simulado
     de 12 questões). Primeiro dia da Semana 5.
+24. Rode `db/dia21_v2.sql` para cadastrar o Dia 21 completo (vozes verbais, médias aritmética/ponderada,
+    atos administrativos aprofundado, segurança da informação + mini-simulado de 12 questões).
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
