@@ -48,6 +48,8 @@ Painel de estudos e desempenho (Next.js 15 + TypeScript + Tailwind 4 + Neon Post
     de 12 questões). Primeiro dia da Semana 5.
 24. Rode `db/dia21_v2.sql` para cadastrar o Dia 21 completo (vozes verbais, médias aritmética/ponderada,
     atos administrativos aprofundado, segurança da informação + mini-simulado de 12 questões).
+25. Rode `db/dia22_v2.sql` para cadastrar o Dia 22 completo (pontuação, probabilidade, agentes públicos
+    (cargo/emprego/função), redes de computadores e Internet + mini-simulado de 12 questões).
 5. `npm run dev` → http://localhost:3000
 
 ## Como o estudo funciona
