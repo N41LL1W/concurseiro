@@ -1,21 +1,21 @@
 import "./globals.css";
-import Link from "next/link";
+import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
-const font = Manrope({ subsets: ["latin"], variable: "--font-sans" });
-
-export const metadata = { title: "Concurseiro" };
-
+import Nav from "@/components/Nav";
+const font = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+export const metadata: Metadata = { title: { default: "Concurseiro", template: "%s · Concurseiro" }, description: "Estudo e desempenho para concursos de nível médio" };
+export const viewport: Viewport = {
+  width: "device-width", initialScale: 1, viewportFit: "cover",
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f3f5f8" }, { media: "(prefers-color-scheme: dark)", color: "#0d1319" }],
+};
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={font.variable}>
-      <body className="mx-auto max-w-5xl px-4 pb-16">
-        <nav className="flex items-baseline gap-6 py-6">
-          <Link href="/" className="text-xl font-bold">Concurseiro</Link>
-          <Link href="/" className="text-sm underline-offset-4 hover:underline">Painel</Link>
-          <Link href="/estudar" className="text-sm underline-offset-4 hover:underline">Estudar</Link>
-          <Link href="/registrar" className="text-sm underline-offset-4 hover:underline">Registrar estudo</Link>
-        </nav>
-        {children}
+      <body className="antialiased">
+        <div className="md:flex">
+          <Nav />
+          <main className="min-w-0 flex-1 px-4 pb-28 pt-5 md:px-10 md:pb-14 md:pt-8"><div className="mx-auto max-w-4xl">{children}</div></main>
+        </div>
       </body>
     </html>
   );

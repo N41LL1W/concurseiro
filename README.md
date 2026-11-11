@@ -69,3 +69,11 @@ defina `DATABASE_URL` em Settings → Environment Variables.
 
 ## Personalizar
 Matérias e metas de horas: `lib/plan.ts`. Meta de acertos: `TARGET_PCT`.
+
+## Novidades da v2 (visual e correções)
+- Layout novo, responsivo (menu lateral no desktop, barra inferior no celular), tema claro/escuro automático.
+- Texto-base das questões (Dias 1 e 16) agora aparece acima das perguntas.
+- Corrigido: dias agora chegam a "Concluído" (blocos de exercício contam quando todas as questões foram respondidas).
+- Questões respondidas na hora, com explicação, confiança e botão "Refazer bloco".
+- Nova página /erros (caderno de erros com filtro por matéria) e painel com sequência de dias e gráfico semanal.
+- Os arquivos db/seed.sql e db/seed_dia2.sql foram removidos (obsoletos): use db/diaN_v2.sql.
