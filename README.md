@@ -77,3 +77,5 @@ Matérias e metas de horas: `lib/plan.ts`. Meta de acertos: `TARGET_PCT`.
 - Questões respondidas na hora, com explicação, confiança e botão "Refazer bloco".
 - Nova página /erros (caderno de erros com filtro por matéria) e painel com sequência de dias e gráfico semanal.
 - Os arquivos db/seed.sql e db/seed_dia2.sql foram removidos (obsoletos): use db/diaN_v2.sql.
+26. Rode `db/dia23_v2.sql` para cadastrar o Dia 23 (interpretação/inferência, análise combinatória, LIMPE,
+    produtos e serviços bancários + mini-simulado de 12 questões). Carga de 4h20, conforme o cronograma do dia.
