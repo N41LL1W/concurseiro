@@ -79,3 +79,5 @@ Matérias e metas de horas: `lib/plan.ts`. Meta de acertos: `TARGET_PCT`.
 - Os arquivos db/seed.sql e db/seed_dia2.sql foram removidos (obsoletos): use db/diaN_v2.sql.
 26. Rode `db/dia23_v2.sql` para cadastrar o Dia 23 (interpretação/inferência, análise combinatória, LIMPE,
     produtos e serviços bancários + mini-simulado de 12 questões). Carga de 4h20, conforme o cronograma do dia.
+27. Rode `db/dia24_v2.sql` para cadastrar o Dia 24 (coesão/coerência, porcentagem, atos administrativos,
+    Sistema Financeiro Nacional + mini-simulado de 12 questões). Carga de 4h20, conforme o cronograma do dia. Fecha a Semana 5.
