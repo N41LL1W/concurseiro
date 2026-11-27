@@ -5,7 +5,7 @@ import type { AnswerResult } from "@/lib/types";
 
 const s = (f: FormData, k: string) => String(f.get(k) ?? "");
 const n = (f: FormData, k: string) => Number(f.get(k) ?? 0);
-const refresh = () => { revalidatePath("/"); revalidatePath("/estudar", "layout"); revalidatePath("/erros"); };
+const refresh = () => { revalidatePath("/"); revalidatePath("/estudar", "layout"); revalidatePath("/tjsp"); revalidatePath("/erros"); };
 
 export async function addSession(f: FormData) {
   await sql`insert into sessions (day, subject, kind, minutes) values (${s(f, "day")}, ${s(f, "subject")}, ${s(f, "kind")}, ${n(f, "minutes")})`;

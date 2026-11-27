@@ -14,8 +14,9 @@ type Q = { id: number; block_id: number; statement: string; options: Record<stri
 export default async function Dia({ params }: { params: Promise<{ id: string }> }) {
   const dayId = Number((await params).id);
   if (!Number.isFinite(dayId)) notFound();
-  const day = (await sql`select id, week, day_number, title from days where id = ${dayId}`)[0] as { id: number; week: number; day_number: number; title: string } | undefined;
+  const day = (await sql`select id, week, day_number, title, track from days where id = ${dayId}`)[0] as { id: number; week: number; day_number: number; title: string; track: string } | undefined;
   if (!day) notFound();
+  const isTjsp = day.track === "tjsp";
 
   const blocks = (await sql`select id, subject, kind, title, minutes, content from blocks where day_id = ${dayId} order by order_index`) as Block[];
   const ids = blocks.map((b) => b.id), exIds = blocks.filter((b) => b.kind === "exercicios").map((b) => b.id);
@@ -25,19 +26,20 @@ export default async function Dia({ params }: { params: Promise<{ id: string }> 
     from questions q
     left join lateral (select chosen, correct from answers where question_id = q.id order by created_at desc limit 1) a on true
     where q.block_id = any(${exIds}) order by q.block_id, q.order_index`) as Q[]) : [];
-  const order = (await sql`select id from days order by week, day_number`) as { id: number }[];
+  const order = (await sql`select id from days where track = ${day.track} order by week, day_number`) as { id: number }[];
   const pos = order.findIndex((d) => d.id === dayId), prev = order[pos - 1], nextDay = order[pos + 1];
 
   const byBlock = new Map<number, Q[]>();
   for (const q of qs) byBlock.set(q.block_id, [...(byBlock.get(q.block_id) ?? []), q]);
   const isDone = (b: Block) => b.kind === "exercicios" ? (byBlock.get(b.id) ?? []).length > 0 && (byBlock.get(b.id) ?? []).every((q) => q.chosen) : done.has(b.id);
   const nDone = blocks.filter(isDone).length;
+  const rotulo = isTjsp ? `Bloco ${day.week - 100} · Módulo ${day.day_number}` : `Semana ${day.week} · Dia ${day.day_number}`;
 
   return (
     <div className="space-y-5">
       <header>
-        <Link href="/estudar" className="text-sm font-bold text-brand">← Trilha de estudo</Link>
-        <p className="mt-2 text-xs font-bold text-muted">Semana {day.week} · Dia {day.day_number} · {fmtH(blocks.reduce((a, b) => a + b.minutes, 0))}</p>
+        <Link href={isTjsp ? "/tjsp" : "/estudar"} className="text-sm font-bold text-brand">← {isTjsp ? "Curso TJSP" : "Trilha de estudo"}</Link>
+        <p className="mt-2 text-xs font-bold text-muted">{rotulo} · {fmtH(blocks.reduce((a, b) => a + b.minutes, 0))}</p>
         <h1 className="text-xl font-extrabold leading-snug tracking-tight sm:text-2xl">{day.title}</h1>
         <div className="mt-3 flex items-center gap-3"><div className="h-2 flex-1 overflow-hidden rounded-full bg-line"><div className="h-full rounded-full bg-brand transition-all" style={{ width: `${(nDone / blocks.length) * 100}%` }} /></div><span className="text-xs font-bold text-muted">{nDone}/{blocks.length}</span></div>
       </header>
@@ -95,8 +97,8 @@ export default async function Dia({ params }: { params: Promise<{ id: string }> 
       })}
 
       <footer className="flex items-center justify-between gap-3 pt-2">
-        {prev ? <Link href={`/estudar/${prev.id}`} className="btn btn-soft">← Dia anterior</Link> : <span />}
-        {nextDay ? <Link href={`/estudar/${nextDay.id}`} className="btn">Próximo dia →</Link> : <span />}
+        {prev ? <Link href={`/estudar/${prev.id}`} className="btn btn-soft">← Anterior</Link> : <span />}
+        {nextDay ? <Link href={`/estudar/${nextDay.id}`} className="btn">Próximo →</Link> : <span />}
       </footer>
     </div>
   );

@@ -1,7 +1,7 @@
 import { sql } from "./db";
 export type DayRow = { id: number; week: number; day_number: number; title: string; total: number; done: number; minutes: number; subjects: string[] | null };
-// Teoria/revisão = tem conclusão; exercícios = todas as questões respondidas.
-export async function getDays(): Promise<DayRow[]> {
+// Teoria/revisão = tem conclusão; exercícios = todas as questões respondidas. Filtra por trilha ('geral' ou 'tjsp').
+export async function getDays(track = "geral"): Promise<DayRow[]> {
   return (await sql`
     select t.id, t.week, t.day_number, t.title,
       count(*)::int total, (count(*) filter (where t.done))::int done, sum(t.minutes)::int minutes,
@@ -14,6 +14,7 @@ export async function getDays(): Promise<DayRow[]> {
           (select count(distinct a.question_id) from answers a join questions q on q.id = a.question_id where q.block_id = b.id)
         else exists (select 1 from block_completions c where c.block_id = b.id) end as done
       from days d join blocks b on b.day_id = d.id
+      where d.track = ${track}
     ) t
     group by t.id, t.week, t.day_number, t.title
     order by t.week, t.day_number`) as DayRow[];
